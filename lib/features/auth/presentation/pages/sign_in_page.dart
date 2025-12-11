@@ -1,14 +1,22 @@
 import 'dart:async';
 
+import 'package:demodoumentation/features/auth/presentation/pages/sign_in_success.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
 class SignInPage extends StatelessWidget {
   const SignInPage({super.key});
 
-  void _handleAuthenticationEvent(GoogleSignInAuthenticationEvent event) {
+  void _handleAuthenticationEvent(
+    BuildContext context,
+    GoogleSignInAuthenticationEvent event,
+  ) {
     // Handle successful authentication
     debugPrint('Authentication event: $event');
+    // Navigate to success page
+    Navigator.of(context).pushReplacement(
+      MaterialPageRoute(builder: (context) => const SignInSuccess()),
+    );
   }
 
   void _handleAuthenticationError(Object error) {
@@ -29,7 +37,7 @@ class SignInPage extends StatelessWidget {
           )
           .then((_) {
             signIn.authenticationEvents
-                .listen(_handleAuthenticationEvent)
+                .listen((event) => _handleAuthenticationEvent(context, event))
                 .onError(_handleAuthenticationError);
 
             /// This example always uses the stream-based approach to determining
@@ -39,21 +47,26 @@ class SignInPage extends StatelessWidget {
           }),
     );
     return Scaffold(
-      appBar: AppBar(title: Text("Google Sign In")),
+      appBar: AppBar(title: const Text("Google Sign In")),
       body: SizedBox(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             if (GoogleSignIn.instance.supportsAuthenticate())
-              ElevatedButton(
+              IconButton(
                 onPressed: () async {
                   try {
                     await GoogleSignIn.instance.authenticate();
                   } catch (e) {
-                    debugPrint('Caught$e');
+                    debugPrint('Caught: $e');
+                    if (context.mounted) {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(content: Text('Authentication failed: $e')),
+                      );
+                    }
                   }
                 },
-                child: const Text('SIGN IN'),
+                icon: const Icon(Icons.login),
               ),
           ],
         ),
