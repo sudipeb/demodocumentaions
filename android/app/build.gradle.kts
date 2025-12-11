@@ -36,9 +36,10 @@ android {
             // Signing with the debug keys for now, so `flutter run --release` works.
             signingConfig = signingConfigs.getByName("debug")
         }
-    }
-    dependencies{
-        implementation 'com.google.android.gms:play-services-auth:20.4.1'   
+        dependencies {
+    implementation("com.google.android.gms:play-services-auth:20.4.1")
+}
+
     }
 }
 

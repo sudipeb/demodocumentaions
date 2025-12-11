@@ -7,7 +7,10 @@ class SignInPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: Text("Google Sign In")),
       body: SizedBox(
-        child: Column(children: [Text("Verification of Sign In")]),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [Center(child: Text("Verification of Sign In"))],
+        ),
       ),
     );
   }
