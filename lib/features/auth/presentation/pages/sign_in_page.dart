@@ -7,16 +7,9 @@ import 'package:google_sign_in/google_sign_in.dart';
 class SignInPage extends StatelessWidget {
   const SignInPage({super.key});
 
-  void _handleAuthenticationEvent(
-    BuildContext context,
-    GoogleSignInAuthenticationEvent event,
-  ) {
+  void _handleAuthenticationEvent(GoogleSignInAuthenticationEvent event) {
     // Handle successful authentication
     debugPrint('Authentication event: $event');
-    // Navigate to success page
-    Navigator.of(context).pushReplacement(
-      MaterialPageRoute(builder: (context) => const SignInSuccess()),
-    );
   }
 
   void _handleAuthenticationError(Object error) {
@@ -37,7 +30,7 @@ class SignInPage extends StatelessWidget {
           )
           .then((_) {
             signIn.authenticationEvents
-                .listen((event) => _handleAuthenticationEvent(context, event))
+                .listen(_handleAuthenticationEvent)
                 .onError(_handleAuthenticationError);
 
             /// This example always uses the stream-based approach to determining
