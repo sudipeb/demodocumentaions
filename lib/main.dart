@@ -1,16 +1,19 @@
-import 'package:demodoumentation/features/auth/presentation/pages/sign_in_page.dart';
+import 'package:demodoumentation/app_route.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
+  MyApp({super.key});
+  final _appRouter = AppRouter();
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(title: 'Flutter Demo', home: const SignInPage());
+    return MaterialApp.router(
+      title: 'Flutter Demo',
+      routerConfig: _appRouter.config(),
+    );
   }
 }
