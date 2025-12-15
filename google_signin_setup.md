@@ -20,17 +20,17 @@ Create an Project using the project name and organization(if involved) using htt
 Points to Remember: While naming the app we must be careful as certain names are Unacceptable. Here's overview of acceptable and unacceptable names:
 #### Examples of unacceptable names:
 
-Google
-YouTube
-Google+ Online
-Google Drive for iOS
-Mobile YouTube app
-Gmail for Android
-Google Photo App
+- Google
+- YouTube
+- Google+ Online
+- Google Drive for iOS
+- Mobile YouTube app
+- Gmail for Android
+- Google Photo App
 
 #### Examples of acceptable names:
 
-Photo Browser
-Inbox Assistant
-PDF Viewer for Google Drive
-Top YouTube Videos
+- Photo Browser
+- Inbox Assistant
+- PDF Viewer for Google Drive
+- Top YouTube Videos
