@@ -182,15 +182,37 @@ class _SignInPageState extends State<SignInPage> {
                           }
                         }
                       },
-                      icon: const Icon(Icons.login),
+                      icon: SizedBox(
+                        width: 24,
+                        height: 24,
+                        child: Image.asset(
+                          "assets/images/google.webp",
+                          width: 24,
+                          height: 24,
+                          fit: BoxFit.contain,
+                          errorBuilder: (context, error, stackTrace) =>
+                              const Icon(
+                                Icons.g_mobiledata,
+                                size: 24,
+                                color: Colors.blue,
+                              ),
+                        ),
+                      ),
                       label: const Text('Sign in with Google'),
                       style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                        foregroundColor: Colors.black87,
+                        elevation: 2,
                         padding: const EdgeInsets.symmetric(
                           horizontal: 24,
                           vertical: 12,
                         ),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(8),
+                          side: const BorderSide(
+                            color: Colors.grey,
+                            width: 0.5,
+                          ),
                         ),
                       ),
                     ),
