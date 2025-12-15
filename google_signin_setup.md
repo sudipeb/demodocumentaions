@@ -16,7 +16,7 @@ For Login/Signup the google cloud Console visit to: https://rb.gy/lx65v4
 ### Step 2: Create a new Project
 Create an Project using the project name and organization(if involved) using https://console.cloud.google.com/projectcreate?previousPage=%2Fwelcome%3Fproject%3Dbamboo-pact-481004-p8&organizationId=0
 ### Step 3: click the Created Project and search APIs and Services under Quick Access on the project screen and Click that.
-### Step 4: Tap on {+ Enable Api and Services} icon in header and enable Google People API.
+### Step 4: Tap on the **+ Enable APIs and Services** button in the header and enable the **Google People API**.
 ### Step 5: Navigate to API and Services Dashboard and click OAuth consent Screen.
 ### Step 6: Configure the project by Providing App Information, Audience, Contact Information and Finish.
 Points to Remember: While naming the app we must be careful as certain names are Unacceptable. Here's overview of acceptable and unacceptable names:
