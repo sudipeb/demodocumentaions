@@ -85,7 +85,12 @@ class _SignInPageState extends State<SignInPage> {
         // Get the actual user data from the sign-in event
         final GoogleSignInAccount user = event.user;
 
+        // 🔑 Get the authentication tokens
+        final GoogleSignInAuthentication auth =  user.authentication;
+        final String? idToken = auth.idToken;
+
         debugPrint('Real user signed in: ${user.displayName}, ${user.email}');
+        debugPrint('ID Token: $idToken');
 
         // Extract real user information from Google account
         userInfo = {
@@ -93,6 +98,7 @@ class _SignInPageState extends State<SignInPage> {
           'email': user.email,
           'id': user.id,
           'photoUrl': user.photoUrl,
+          'idToken': idToken,
           'authStatus': 'Authenticated',
           'authTime': DateTime.now().toString(),
         };

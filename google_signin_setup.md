@@ -202,7 +202,7 @@ onPressed: () async {
 
 <div align="center">
 
-### 💬 Developer Vibes
+<!-- ### 💬 Developer Vibes
 
 | Style | Footer |
 |:-----:|--------|
@@ -212,7 +212,7 @@ onPressed: () async {
 | ☕ | Made with hot reload expectations and hot restart reality |
 | 🎯 | Made with Flutter 💙 and too many OAuth tabs open |
 
----
+--- -->
 
 
 
