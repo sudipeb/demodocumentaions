@@ -1,6 +1,6 @@
-# demodoumentation
+# Google Sign in using Google Native Oauth Client
 
-A new Flutter project.
+This Flutter project demonstrates Google Sign-In using Google's Native OAuth Client, featuring a sign-in page that initializes the google_sign_in package with OAuth client IDs, listens for authentication events via streams, and upon successful authentication navigates to a user details page displaying the user's name, email, photo, and ID—with support for Android platform using auto_route for navigation.
 
 ## Getting Started
 
