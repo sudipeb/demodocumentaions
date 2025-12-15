@@ -9,6 +9,6 @@ OAuth, or open authorization, is a widely adopted authorization framework that a
 
 ## Oauth With Google Console:
 Oauth using google cloud console for flutter involves following steps:
-### Step 1: Creating Google Cloud Console ID
-For creating the google cloud Console visit to: https://rb.gy/lx65v4
+### Step 1: Login/Signup Google Cloud Console ID
+For Login/Signup the google cloud Console visit to: https://rb.gy/lx65v4
 
