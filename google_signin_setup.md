@@ -36,3 +36,19 @@ Points to Remember: While naming the app we must be careful as certain names are
 - Top YouTube Videos
 ### Step 7: Once Successfully setupped you head on to Oauth Overview. On the Metrics Overview, Click on [Create OAuth Client](https://console.cloud.google.com/auth/clients/create?project=Project_name-id)
 You can replace project=Project_name-id with your own project.
+### Step 8: Now Create OAuth client ID by selecting the Application type:
+Application Type includes:
+- Web Application
+-  Android
+- Chrome Extension
+- ios
+- Tv and limited input devices
+- Desktop App
+- Universal Windows Platform
+For now I am picking Android.
+### Step 9: Since we decided to make on Android, we need to fill some other details like:
+For Eg:
+- Name -> [Android client 1]    
+- Package Name -> [com.org.namespace.name]
+- SHA-1 Key -> [AA:BB:CC:DD:EE:FF:11:22:33:44:55:66:77:88:99:00:AA:BB:CC:DD]
+After configuring these we setupped [Oauth Client] successfully.
