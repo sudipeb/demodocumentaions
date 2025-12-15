@@ -46,7 +46,7 @@ class _SignInPageState extends State<SignInPage> {
       );
 
       // Attempt lightweight authentication to check if user is already signed in
-      signIn.attemptLightweightAuthentication();
+      // signIn.attemptLightweightAuthentication();
     } catch (error) {
       debugPrint('Google Sign-In initialization failed: $error');
     }
