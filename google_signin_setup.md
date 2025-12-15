@@ -34,3 +34,5 @@ Points to Remember: While naming the app we must be careful as certain names are
 - Inbox Assistant
 - PDF Viewer for Google Drive
 - Top YouTube Videos
+### Step 7: Once Successfully setupped you head on to Oauth Overview. On the Metrics Overview, Click on [Create OAuth Client](https://console.cloud.google.com/auth/clients/create?project=Project_name-id)
+You can replace project=Project_name-id with your own project.
