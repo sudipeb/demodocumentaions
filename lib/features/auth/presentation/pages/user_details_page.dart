@@ -141,38 +141,6 @@ class _UserDetailsPageState extends State<UserDetailsPage> {
                     ),
                   ),
 
-                  const SizedBox(height: 16),
-
-                  // Additional Info Card
-                  Card(
-                    child: Padding(
-                      padding: const EdgeInsets.all(16.0),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Extractable Information',
-                            style: Theme.of(context).textTheme.titleLarge,
-                          ),
-                          const SizedBox(height: 16),
-                          const Text(
-                            'This data can be extracted after successful Google Sign-In:',
-                            style: TextStyle(fontWeight: FontWeight.w500),
-                          ),
-                          const SizedBox(height: 8),
-                          const Text('• User\'s full name'),
-                          const Text('• Email address'),
-                          const Text('• Profile photo URL'),
-                          const Text('• Unique user ID'),
-                          const Text('• Authentication tokens (for API calls)'),
-                          const Text(
-                            '• Server auth code (for server-side authentication)',
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-
                   const SizedBox(height: 32),
 
                   // Actions
