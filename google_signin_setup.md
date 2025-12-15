@@ -52,3 +52,11 @@ For Eg:
 - Package Name -> [com.org.namespace.name]
 - SHA-1 Key -> [AA:BB:CC:DD:EE:FF:11:22:33:44:55:66:77:88:99:00:AA:BB:CC:DD]
 After configuring these we setupped [Oauth Client] successfully.
+Point to Remember:
+1. While fetching the SHA-1 key, use commands(for ease):
+- cd Android
+- ./gradlew signingReport
+2. You will get the list of keys for different environments like debug, release and profile.
+3. Use the key accoordingly as it might lead to error.
+### Step 10: After Successfully setting up this, we get the client id and a json file which we can download and use later on.
+### Step 11: 
